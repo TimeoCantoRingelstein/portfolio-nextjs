@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+    --color-creme: #F5F0E8;
+    --color-terracotta: #C9886A;
+    --color-charbon: #1C1917;
+
+    --font-serif: --font-dm-serif;
+    --font-sans: --font-dm-sans;
+}
+
+body {
+    background-color: var(--color-creme);
+    color: var(--color-charbon);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif), serif;
+}
