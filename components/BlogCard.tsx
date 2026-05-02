@@ -1,12 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
-export interface ProjectNotes {
-    date:string;
-    titre:string;
-    description?:string;
-    tags?:string[];
-}
+import {ProjectNotes} from "@/types";
 
 const tagClass = "font-sans text-[11px] font-normal px-2.5 py-1 rounded-full bg-creme text-charbon hover:bg-terracotta hover:text-white transition-all duration-200";
 
