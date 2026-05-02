@@ -1,6 +1,7 @@
 import React from 'react';
-import MyButton from "@/components/MyButton";
-import Logo from "@/components/Logo";
+import MyButton from "@/src/components/ui/MyButton";
+import Logo from "@/src/components/ui/Logo";
+import NavLink from "@/src/components/ui/NavLink";
 
 const Footer = () => {
     return (
@@ -11,9 +12,9 @@ const Footer = () => {
                 gap-8 text-sm tracking-widest
                 text-charbon/80 font-medium"
             >
-                <a className="hover:text-terracotta transition-colors cursor-pointer">Github</a>
-                <a className="hover:text-terracotta transition-colors cursor-pointer">LinkedIn</a>
-                <a className="hover:text-terracotta transition-colors cursor-pointer">Email</a>
+                <NavLink href="https://github.com">GitHub</NavLink>
+                <NavLink href="https://linkedin.com">LinkedIn</NavLink>
+                <NavLink href="https://google.com">Email</NavLink>
             </div>
             <p className="text-charbon/40">© 2026 – Fait avec NextJS</p>
         </nav>

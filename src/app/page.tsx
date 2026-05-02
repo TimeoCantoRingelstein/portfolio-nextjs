@@ -1,6 +1,6 @@
-import Hero from "@/components/home/Hero";
-import BlogCard from "@/components/BlogCard";
-import BlogCardList from "@/components/BlogCardList";
+import Hero from "@/src/components/home/Hero";
+import BlogCard from "@/src/components/BlogCard";
+import BlogCardList from "@/src/components/BlogCardList";
 
 export default function Home() {
   return (
