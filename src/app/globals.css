@@ -1,4 +1,4 @@
-@import "../../node_modules/tailwindcss/dist/lib.d.mts";
+@import "tailwindcss/index.css";
 
 @theme {
     --color-creme: #F5F0E8;
