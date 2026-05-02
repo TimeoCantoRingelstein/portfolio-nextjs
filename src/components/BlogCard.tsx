@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import {ProjectNotes} from "@/types";
-
-const tagClass = "font-sans text-[11px] font-normal px-2.5 py-1 rounded-full bg-creme text-charbon hover:bg-terracotta hover:text-white transition-all duration-200";
+import {ProjectNotes} from "@/src/types";
+import Badge from "@/src/components/ui/Badge";
 
 const BlogCard = ({date, titre, description, tags}:ProjectNotes) => {
     return (
@@ -25,8 +24,8 @@ const BlogCard = ({date, titre, description, tags}:ProjectNotes) => {
                 <div>{tags && tags.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 mb-5 pt-3">
                         {tags.map((tag) => (
-                            <span key={tag} className={tagClass}>
-                                {tag}
+                            <span key={tag}>
+                                <Badge>{tag}</Badge>
                             </span>
                         ))}
                     </div>
