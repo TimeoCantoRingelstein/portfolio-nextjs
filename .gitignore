@@ -43,4 +43,5 @@ next-env.d.ts
 #Other
 AGENTS.md
 CLAUDE.md
+GEMINI.md
 .idea
