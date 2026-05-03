@@ -11,3 +11,12 @@ export interface Notes {
     link?: string;
     image?: string;
 }
+
+export interface ContentCardProperties {
+    item: Notes;
+    type: "blog" | "projects"; // Le type définit le design et l'URL
+}
+
+export interface ContentListProperties {
+    type: "blog" | "projects";
+}
