@@ -8,7 +8,7 @@ export default function NavLink({href, isExternal, children}: NavItem) {
     return (
         <Link
             href={href}
-            className="hover:text-terracotta transition-colors cursor-pointer"
+            className="hover:text-terracotta transition-colors cursor-pointer duration-200"
             target={external ? "_blank" : undefined}
             rel={external ? "noopener noreferrer" : undefined}
         >

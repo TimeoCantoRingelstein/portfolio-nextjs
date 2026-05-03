@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface Notes {
     id:string;
     title: string;
@@ -11,6 +13,12 @@ export interface Notes {
     link?: string;
     image?: string;
 }
+
+export interface ButtonProps {
+    children: React.ReactNode;           // Ta variable texte obligatoire
+    onClick?: () => void;    // Une variable optionnelle pour l'action du clic
+}
+
 
 export interface ContentCardProperties {
     item: Notes;

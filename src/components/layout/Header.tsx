@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react";
-import MyButton from "@/src/components/ui/MyButton";
+import CremeButton from "@/src/components/ui/CremeButton";
 import Logo from "@/src/components/ui/Logo";
 import NavLink from "@/src/components/ui/NavLink";
 import {useScrollDirection} from "@/src/lib/useScrollDirection";
@@ -30,7 +30,7 @@ const Header = () => {
                 <NavLink href="/blog">Blog</NavLink>
                 <NavLink href="/about">À propos</NavLink>
             </nav>
-            <MyButton label = "Me contacter"/>
+            <CremeButton>Me contacter</CremeButton>
         </header>
     );
 };
