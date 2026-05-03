@@ -5,7 +5,7 @@ import Logo from "@/src/components/ui/Logo";
 import NavLink from "@/src/components/ui/NavLink";
 import {useScrollDirection} from "@/src/lib/useScrollDirection";
 
-const Navbar = () => {
+const Header = () => {
     const isVisible = useScrollDirection();
     return (
         <header
@@ -21,9 +21,9 @@ const Navbar = () => {
         >
             <Logo />
             <nav className="
-                hidden md:flex
+                hidden md:flex absolute left-1/2 -translate-x-1/2
                 gap-8 text-sm tracking-widest uppercase
-                text-charbon/80"
+                text-charbon/80 whitespace-nowrap"
             >
                 <NavLink href="/projects">Projets</NavLink>
                 <NavLink href="/experiences">Experiences</NavLink>
@@ -35,4 +35,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Header;

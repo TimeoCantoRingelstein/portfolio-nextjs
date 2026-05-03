@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import {DM_Sans, DM_Serif_Display, Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 
-import Navbar from "@/src/components/layout/Navbar";
+import Header from "@/src/components/layout/Header";
 import Footer from "@/src/components/layout/Footer";
 
 const geistSans = Geist({
@@ -44,7 +44,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
         <body className={`${dmSans.variable} ${dmSerif.variable} font-sans antialiased`}>
-            <Navbar />
+            <Header />
             <div className="flex-1">
                 {children}
             </div>
