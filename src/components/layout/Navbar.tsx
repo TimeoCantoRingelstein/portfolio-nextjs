@@ -1,13 +1,26 @@
-import React from 'react';
+"use client"
+import React, { useEffect, useState } from "react";
 import MyButton from "@/src/components/ui/MyButton";
 import Logo from "@/src/components/ui/Logo";
 import NavLink from "@/src/components/ui/NavLink";
+import {useScrollDirection} from "@/src/lib/useScrollDirection";
 
 const Navbar = () => {
+    const isVisible = useScrollDirection();
     return (
-        <nav className="flex justify-between items-center w-full py-6 px-12 border-b border-charbon/10">
+        <header
+            className={`
+                flex justify-between items-center w-full 
+                py-6 px-12 border-b border-charbon/10
+                sticky top-0 z-50 bg-creme
+                transition-transform duration-300 ease-in-out
+                ${isVisible? "translate-y-0": "-translate-y-full"}
+                md:translate-0
+                
+            `}
+        >
             <Logo />
-            <div className="
+            <nav className="
                 hidden md:flex
                 gap-8 text-sm tracking-widest uppercase
                 text-charbon/80"
@@ -16,9 +29,9 @@ const Navbar = () => {
                 <NavLink href="/experiences">Experiences</NavLink>
                 <NavLink href="/blog">Blog</NavLink>
                 <NavLink href="/about">À propos</NavLink>
-            </div>
+            </nav>
             <MyButton label = "Me contacter"/>
-        </nav>
+        </header>
     );
 };
 
