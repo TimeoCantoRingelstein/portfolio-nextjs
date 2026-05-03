@@ -41,7 +41,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
         <body className={`${dmSans.variable} ${dmSerif.variable} font-sans antialiased`}>
             <Navbar />
             <div className="flex-1">

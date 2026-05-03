@@ -1,9 +1,9 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter"
-import { ProjectNotes } from "@/src/types"
+import { Notes } from "@/src/types"
 
-export function getSortedPostsData(type:string): ProjectNotes[] {
+export function getSortedPostsData(type:string): Notes[] {
     const postsDirectory = path.join(process.cwd(), 'content/', type)
 
     const fileNames:string[] = fs.readdirSync(postsDirectory);
@@ -21,12 +21,12 @@ export function getSortedPostsData(type:string): ProjectNotes[] {
         // Combine the data with the id
         return {
             id,
-            ...(matterResult.data as Omit<ProjectNotes, 'id'>),
-        } as ProjectNotes
+            ...(matterResult.data as Omit<Notes, 'id'>),
+        } as Notes
     });
 
     // Sort posts by date
-    return allPostsData.sort((a: ProjectNotes, b: ProjectNotes) => {
+    return allPostsData.sort((a: Notes, b: Notes) => {
         return a.date < b.date ? 1: -1
     });
 }
