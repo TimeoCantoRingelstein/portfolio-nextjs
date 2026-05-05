@@ -1,12 +1,14 @@
-import Hero from "@/src/components/home/Hero";
-import ContentList from "@/src/components/cards/ContentList";
+import HeroFrame from "@/src/components/home/HeroFrame";
+import BlogFrame from "@/src/components/home/BlogFrame";
+import ProjectsFrame from "@/src/components/home/ProjectsFrame";
 
 export default function Home() {
     return (
         <main className="relative flex justify-center items-center">
             <div className="">
-                <Hero />
-                <ContentList type={"blog"}/>
+                <HeroFrame />
+                <ProjectsFrame></ProjectsFrame>
+                <BlogFrame></BlogFrame>
             </div>
         </main>
     );
