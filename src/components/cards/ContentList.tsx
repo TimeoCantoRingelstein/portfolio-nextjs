@@ -6,8 +6,9 @@ import {getSortedPostsData} from "@/src/lib/posts";
 const ContentList = ({ type }: ContentListProperties) => {
     const items: Notes[] = getSortedPostsData(type);
     return (
-        <div className="max-w-7xl mx-auto px-6 py-12">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-stretch">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-stretch pb-12">
+
                 {items.map((item) => (
                     <ContentCard
                         key={item.id}

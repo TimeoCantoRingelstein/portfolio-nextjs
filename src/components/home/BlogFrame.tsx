@@ -3,11 +3,14 @@ import ContentList from "@/src/components/cards/ContentList";
 
 const BlogFrame = () => {
     return (
-        <div>
-            <h1>Blog</h1>
+        <section className="w-full py-12">
+            <div className="max-w-7xl mx-auto px-6 lg:px-12">
+                <h2 className="mb-8">Derniers Articles</h2>
+            </div>
             <ContentList type={"blog"}></ContentList>
-        </div>
+        </section>
     );
 };
+
 
 export default BlogFrame;
