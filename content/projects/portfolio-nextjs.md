@@ -20,6 +20,8 @@ J'ai donc opté pour un écosystème plus souple, moderne et orienté interface 
 - NextJS : Pour sa flexibilité 
 - blah blah blah
 
+![Modigliani](/Modigliani.jpg)
+
 Au départ, j'étais perdu. Je ne savais pas par où commencer n'ayant jamais utilisé ce framework. 
 Je ne me cache pas d'avoir donc demandé à Gemini (Alphabet Inc.) qui m'a accompagné durant tout ce projet. 
 Plutôt que de simplement copier du code, l'IA m'a permis de comprendre en profondeur les concepts comme les composants serveur (Server Components) et de routage dynamique tout en accélérant la résolution de bugs complexes.
@@ -33,3 +35,5 @@ J'ai choisi une interface simple, douce inspirée de magazines d'art, tout en ga
 
 ## Conclusion
 Ce portfolio n'est pas qu'une vitrine, c'est le témoin de ma transition vers des technologies modernes et de ma capacité à apprendre et construire rapidement.
+
+Je te conseille de regarder mon projet sur [le redesign de cette app](/projects/redesign-app), ou de visiter le [site officiel de React](https://react.dev).

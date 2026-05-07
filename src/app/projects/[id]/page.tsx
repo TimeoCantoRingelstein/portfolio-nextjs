@@ -5,12 +5,17 @@ import Link from "next/link";
 import Image from "next/image";
 import Badge from "@/src/components/ui/Badge";
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import { customMDXComponents } from "@/src/components/ui/MDXComponent";
+import {notFound} from "next/navigation";
 
 export default async function FullProjectPage({ params } : { params : Promise<{ id : string }> }) {
-    // Exactement comme pour la modale, on récupère l'ID
     const resolvedParams = await params;
     const projectId = resolvedParams.id;
-    const projectData: Notes = await getPostedData('projects', projectId);
+    const projectData: Notes|null = await getPostedData('projects', projectId);
+
+    if (!projectData) {
+        notFound();
+    }
 
     return (
         <main className="min-h-screen bg-creme pb-24">
@@ -51,7 +56,7 @@ export default async function FullProjectPage({ params } : { params : Promise<{ 
             )}
 
             {/* --- CONTENU & DESCRIPTION --- */}
-            <article className="prose max-w-2xl mx-auto px-6 prose prose-lg prose-headings:font-serif prose-p:text-charbon/80">
+            <article className="prose max-w-2xl mx-auto px-6 prose-lg prose-headings:font-serif prose-p:text-charbon/80">
                 {projectData.description && (
                     <p className="text-xl leading-relaxed text-charbon font-medium mb-12 text-center">
                         {projectData.description}
@@ -59,7 +64,10 @@ export default async function FullProjectPage({ params } : { params : Promise<{ 
                 )}
 
                 {projectData.content && (
-                    <MDXRemote source={projectData.content} />
+                    <MDXRemote
+                        source={projectData.content}
+                        components={customMDXComponents}
+                    />
                 )}
             </article>
 

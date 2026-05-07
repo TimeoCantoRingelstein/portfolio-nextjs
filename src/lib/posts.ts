@@ -33,21 +33,25 @@ export function getSortedPostsData(type:string): Notes[] {
     });
 }
 
-export function getPostedData(type: string, id: string): Notes {
+export function getPostedData(type: string, id: string): Notes | null {
     const fullPath = path.join(postsDirectory, type, `${id}.md`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
+    try {
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const {data, content} = matter(fileContents);
 
 
-    return {
-        id,
-        title: data.title,
-        date: data.date,
-        description: data.description || "",
-        tags: data.tags || [],
-        github: data.github || null,
-        link: data.link || null,
-        image: data.image || null,
-        content: content,
-    } as Notes;
+        return {
+            id,
+            title: data.title,
+            date: data.date,
+            description: data.description || "",
+            tags: data.tags || [],
+            github: data.github || null,
+            link: data.link || null,
+            image: data.image || null,
+            content: content,
+        } as Notes;
+    } catch {
+        return null;
+    }
 }
