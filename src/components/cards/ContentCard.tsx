@@ -27,11 +27,10 @@ const ContentCard = ({ item, type }:ContentCardProperties) => {
                 {item.date}
             </p>
 
-            <h4 className="font-serif text-3xl tracking-tight font-normal mb-2 text-charbon">
+            <h4 className="mb-2 font-normal">
                 {item.title}
             </h4>
-
-            <h5 className="text-charbon/70 mb-4 line-clamp-2 break-words">
+            <h5 className="mb-4 line-clamp-2 break-words">
                 {item.description}
             </h5>
 

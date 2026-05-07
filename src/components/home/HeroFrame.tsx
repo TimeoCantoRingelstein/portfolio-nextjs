@@ -1,6 +1,5 @@
 import React from 'react';
 import CremeButton from "@/src/components/ui/CremeButton";
-import Image from "next/image";
 
 const HeroFrame = () => {
   return (
@@ -9,16 +8,14 @@ const HeroFrame = () => {
         flex justify-between items-center
     ">
         <div>
-            <h3>Disponible pour alternance Côte d&#39;Azur</h3>
+            <h3 className="text-lg font-medium text-charbon/60 mb-2">Disponible pour alternance Côte d&#39;Azur</h3>
 
-            <h1 className=
-                "font-serif text-6xl font-semibold tracking-tighter"
-            >
+            <h1>
                 Ingénieur<br/>
-                qui <span className={"italic text-terracotta"}>suce</span> David.
+                <span className={"italic text-terracotta"}>curieux</span> & authentique.
             </h1>
 
-            <h2>
+            <h2 className="text-2xl font-normal mt-4 mb-8 max-w-2xl">
                 Élève ingénieur en informatique passionné par l&#39;intelligence artificielle.
             </h2>
 

@@ -3,10 +3,10 @@ import Link from "next/link";
 import {Notes} from "@/src/types";
 import Badge from "@/src/components/ui/Badge";
 
-const BlogCard = ({date, titre, description, tags}:Notes) => {
+const BlogCard = ({date, title, description, tags}:Notes) => {
     return (
         <Link
-            href={`/projects/${titre}`}
+            href={`/projects/${title}`}
             className="group flex flex-col justify-between bg-white border border-charbon/10 rounded-2xl p-7 no-underline text-inherit transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(28,25,23,0.08)] h-full"
         >
         <div className="flex-1">
@@ -16,9 +16,9 @@ const BlogCard = ({date, titre, description, tags}:Notes) => {
                 </p>
 
                 <h4 className="font-bold text-xl">
-                    {titre}
+                    {title}
                 </h4>
-                <h5 className={"text-charbon/70"}>
+                <h5>
                     {description}
                 </h5>
                 <div>{tags && tags.length > 0 && (
