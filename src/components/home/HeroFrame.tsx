@@ -2,7 +2,7 @@ import React from 'react';
 import CremeButton from "@/src/components/ui/CremeButton";
 import Image from "next/image";
 
-const Hero = () => {
+const HeroFrame = () => {
   return (
     <div className="
         pb-20 pt-40
@@ -11,14 +11,16 @@ const Hero = () => {
         <div>
             <h3>Disponible pour alternance Côte d&#39;Azur</h3>
 
-            <h1 className="
-                font-serif text-6xl font-semibold tracking-tighter"
+            <h1 className=
+                "font-serif text-6xl font-semibold tracking-tighter"
             >
-                Ingénieur, <br/>
-                <span className={"italic text-terracotta"}>curieux</span> & créatif.
+                Ingénieur<br/>
+                qui <span className={"italic text-terracotta"}>suce</span> David.
             </h1>
 
-            <h2>Élève ingénieur en informatique passionné par l&#39;intelligence artificielle.</h2>
+            <h2>
+                Élève ingénieur en informatique passionné par l&#39;intelligence artificielle.
+            </h2>
 
             <div className={"flex gap-4"}>
                 <CremeButton>Voir mes projets</CremeButton>
@@ -28,7 +30,7 @@ const Hero = () => {
         </div>
 
         <img
-            src="/chibi_cloud.png"
+            src="/chibi/cloud.png"
             alt={"chibi on a cloud"}
             className={"h-50 -scale-x-100"}
         />
@@ -36,4 +38,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroFrame;
