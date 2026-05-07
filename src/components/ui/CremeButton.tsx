@@ -1,7 +1,7 @@
 import React from 'react';
-import { ButtonProps } from "@/src/types"
+import { ButtonProperties } from "@/src/types"
 
-const CremeButton = ({ children, onClick }: ButtonProps) => {
+const CremeButton = ({ children, onClick }: ButtonProperties) => {
     return (
         <button
             onClick={onClick}

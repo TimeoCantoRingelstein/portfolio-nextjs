@@ -3,16 +3,18 @@ import fs from "fs";
 import matter from "gray-matter"
 import { Notes } from "@/src/types"
 
-export function getSortedPostsData(type:string): Notes[] {
-    const postsDirectory = path.join(process.cwd(), 'content/', type)
+const postsDirectory = path.join(process.cwd(), 'content/');
 
-    const fileNames:string[] = fs.readdirSync(postsDirectory);
+export function getSortedPostsData(type:string): Notes[] {
+    const postsDirectoryType = path.join(postsDirectory, type);
+    const fileNames:string[] = fs.readdirSync(postsDirectoryType);
+
     const allPostsData = fileNames.map((fileName) => {
         // Remove ".md" from file name to get id
         const id:string = fileName.replace(/\.md$/, '');
 
         // Read markdown file as string
-        const fullPath = path.join(postsDirectory, fileName);
+        const fullPath = path.join(postsDirectoryType, fileName);
         const fileContents = fs.readFileSync(fullPath, "utf-8");
 
         // Use gray-matter to parse the post metadata section
@@ -29,4 +31,23 @@ export function getSortedPostsData(type:string): Notes[] {
     return allPostsData.sort((a: Notes, b: Notes) => {
         return a.date < b.date ? 1: -1
     });
+}
+
+export function getPostedData(type: string, id: string): Notes {
+    const fullPath = path.join(postsDirectory, type, `${id}.md`);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const { data, content } = matter(fileContents);
+
+
+    return {
+        id,
+        title: data.title,
+        date: data.date,
+        description: data.description || "",
+        tags: data.tags || [],
+        github: data.github || null,
+        link: data.link || null,
+        image: data.image || null,
+        content: content,
+    } as Notes;
 }
