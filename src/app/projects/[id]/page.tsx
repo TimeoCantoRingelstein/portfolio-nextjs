@@ -29,7 +29,7 @@ export default async function FullProjectPage({ params } : { params : Promise<{ 
                     <div className="flex flex-wrap justify-center gap-3 mt-8">
                         {projectData.tags.map((tag, index) => (
                             <span key={index}>
-                                <Badge>{tag}</Badge>
+                                <Badge variant="prominent">{tag}</Badge>
                             </span>
                         ))}
                     </div>

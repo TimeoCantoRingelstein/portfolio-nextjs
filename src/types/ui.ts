@@ -8,6 +8,7 @@ export type NavItem = {
 
 export type BadgeProperties = {
     children: React.ReactNode;
+    variant?: "default" | "prominent";
 };
 
 export interface ButtonProperties {
