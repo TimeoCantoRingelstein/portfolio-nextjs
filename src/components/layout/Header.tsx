@@ -26,7 +26,7 @@ const Header = () => {
                 text-charbon/80 whitespace-nowrap"
             >
                 <NavLink href="/projects">Projets</NavLink>
-                <NavLink href="/experiences">Experiences</NavLink>
+                {/*<NavLink href="/experiences">Experiences</NavLink>*/}
                 <NavLink href="/blog">Blog</NavLink>
                 <NavLink href="/about">À propos</NavLink>
             </nav>

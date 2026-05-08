@@ -5,11 +5,11 @@ import Link from "next/link"
 import Image from "next/image";
 
 export default function NotFound() {
-    return(
+    return (
         <main className={"flex flex-line items-center justify-center flex-1 min-h-[70vh] md:min-h-[78vh] px-6 text-center gap-6"}>
             <div className={"flex flex-col justify-center items-center"}>
                 <h1 className={"text-center capitalize"}>
-                    404 <br/> not found
+                    404 <br /> not found
                 </h1>
                 <Link
                     href="/"
@@ -19,10 +19,10 @@ export default function NotFound() {
                 </Link>
             </div>
             <Image className={"w-50 h-full"}
-                   src={"/chibi/bug.png"}
-                   alt={"bug"}
-                   width={"500"}
-                   height={"500"}
+                src={"/chibi/bug.png"}
+                alt={"bug"}
+                width={"500"}
+                height={"500"}
             />
         </main>
     )
