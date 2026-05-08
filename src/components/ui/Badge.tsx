@@ -45,11 +45,11 @@ const Badge = ({ children, variant = "default" }: BadgeProperties) => {
         <p className={`
             font-sans px-3 font-normal py-1 rounded-full transition-all duration-200 flex items-center gap-1.5 cursor-pointer
             ${isProminent
-                ? "text-xs bg-terracotta tracking-wider text-white p-4 hover:bg-white hover:text-terracotta border border-terracotta"
+                ? "text-base bg-terracotta tracking-wider text-white px-5 py-2.5 hover:bg-white hover:text-terracotta border border-terracotta font-medium shadow-sm"
                 : "text-[13px] bg-creme text-charbon hover:bg-terracotta hover:text-white hover:border-transparent group"
             }
         `}>
-            {Icon && <Icon className={`text-[1.2em] "text-charbon/70 group-hover:text-white" : "text-charbon/50 group-hover:text-white"`} />}
+            {Icon && <Icon className="text-[1.2em]" />}
             <span>{children}</span>
         </p>
     );

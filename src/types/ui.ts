@@ -25,3 +25,14 @@ export interface ContentCardProperties {
 export interface ContentListProperties {
     type: "blog" | "projects";
 }
+
+export interface TimelineProps {
+    children: React.ReactNode;
+}
+
+export interface TimelineItemProps {
+    period: string;
+    title: string;
+    description: string;
+    isActive?: boolean;
+}

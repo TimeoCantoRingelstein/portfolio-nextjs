@@ -46,3 +46,6 @@ CLAUDE.md
 GEMINI.md
 .idea
 resources/
+.claude/
+.antigravity/
+.kronk/
