@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaJava } from "react-icons/fa";
 import { 
-    SiNextdotjs, 
+    SiNextdotjs,
+    SiReact,
     SiTypescript,
     SiJavascript,
     SiHtml5,
@@ -13,11 +14,15 @@ import {
     SiCplusplus,
     SiMysql,
     SiFigma,
-    SiGit 
+    SiGit,
+    SiBlender,
+    SiPython,
+    SiArduino
 } from "react-icons/si";
 
 const skills = [
-    { name: "React & Next.js", icon: SiNextdotjs },
+    { name: "React", icon: SiReact },
+    { name: "Next.js", icon: SiNextdotjs },
     { name: "TypeScript", icon: SiTypescript },
     { name: "JavaScript", icon: SiJavascript },
     { name: "HTML", icon: SiHtml5 },
@@ -26,10 +31,13 @@ const skills = [
     { name: "Angular", icon: SiAngular },
     { name: "Node.js", icon: SiNodedotjs },
     { name: "Java", icon: FaJava },
+    { name: "Python", icon: SiPython },
     { name: "C", icon: SiC },
     { name: "C++", icon: SiCplusplus },
+    { name: "Arduino", icon: SiArduino },
     { name: "SQL", icon: SiMysql },
     { name: "Figma", icon: SiFigma },
+    { name: "Blender", icon: SiBlender },
     { name: "Git", icon: SiGit },
 ];
 

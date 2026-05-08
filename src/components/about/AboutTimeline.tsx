@@ -9,19 +9,24 @@ const AboutTimeline = () => {
             <Timeline>
                 <TimelineItem 
                     isActive={true}
-                    period="Aujourd'hui"
-                    title="Développeur Freelance"
-                    description="Création d'applications web sur mesure pour divers clients, en me concentrant sur la performance et le design."
+                    period="2025 - Aujourd'hui"
+                    title="Polytech Nice Sophia Antipolis"
+                    description="Élève ingénieur spécialisé en génie informatique."
                 />
                 <TimelineItem 
-                    period="2023 - 2024"
-                    title="Développeur Front-end"
-                    description="Développement d'interfaces utilisateur interactives au sein d'une agence digitale, avec une forte utilisation de React."
+                    period="2023 - 2025"
+                    title="Lycée Voltaire, Paris"
+                    description="Classes préparatoires aux grandes écoles, filière PTSI puis PT."
                 />
                 <TimelineItem 
-                    period="2021 - 2023"
-                    title="Formation en Informatique"
-                    description="Apprentissage des fondamentaux de la programmation, de l'algorithmique et des technologies du web."
+                    period="2022 - 2023"
+                    title="Lycée des Petits Champs, Paris"
+                    description="Baccalauréat scientifique spécialité physique-chimie et mathématiques (option maths expertes), mention assez bien."
+                />
+                <TimelineItem 
+                    period="2020 - 2022"
+                    title="Lycée Bossuet Notre Dame, Paris"
+                    description="Baccalauréat scientifique spécialité physique-chimie, mathématiques et SVT, mention bien."
                 />
             </Timeline>
         </div>
